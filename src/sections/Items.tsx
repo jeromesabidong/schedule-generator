@@ -6,7 +6,6 @@ import { Item } from "../types";
 
 const Items = () => {
   const [items, setItems] = useState<Item[]>([]);
-  const [isExpanded, setIsExpanded] = useState(true);
 
   const handleAdd = () => {
     const newItem: Item = {
