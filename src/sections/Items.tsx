@@ -11,6 +11,8 @@ const Items = () => {
     const newItem: Item = {
       name: `Item ${items.length + 1}`,
       id: `${items.length + 1}`,
+      time: { start: "10:00 AM", end: "7:00 PM" },
+      days: ["M", "T", "W", "Th", "F"],
     };
     setItems([...items, newItem]);
   };
@@ -43,7 +45,7 @@ const Items = () => {
           <ul className="list bg-base-100 border border-gray-100 rounded-box">
             {items &&
               items.map((item, key) => {
-                return <ListItem key={key} item={item} />;
+                return <ListItem key={key} item={item} setItems={setItems} />;
               })}
             {items.length === 0 && <li>No items listed.</li>}
           </ul>
