@@ -14,7 +14,7 @@ const Calendar = () => {
     const endOfMonth = month.clone().endOf("month");
     const startDate = startOfMonth.clone().startOf("week");
     const endDate = endOfMonth.clone().endOf("week").add(1, "days");
-    let currentDate = startDate.clone();
+    const currentDate = startDate.clone();
 
     const dates = [];
 

@@ -16,10 +16,10 @@ const ListItem = (props: {
     );
   };
 
-  const changeDays = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const updateItem = { ...props.item, days: [] };
-    // to-do update
-  };
+  // const changeDays = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const updateItem = { ...props.item, days: [] };
+  //   // to-do update
+  // };
 
   return (
     <li className="list-row flex flex-col">
