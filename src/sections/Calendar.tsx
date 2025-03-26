@@ -43,34 +43,34 @@ const Calendar = () => {
 
             <DisplayOptions />
           </div>
-          <div className="border border-gray-200">
+          <div className="border">
             {/* HEADER */}
-            <div className="grid grid-cols-7  divide-gray-200 border-b border-gray-200">
-              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r border-gray-200">
-                <span className="text-sm font-medium text-gray-500">Sun</span>
+            <div className="grid grid-cols-7 border-b">
+              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r">
+                <span className="text-sm font-medium">Sun</span>
               </div>
-              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r border-gray-200">
-                <span className="text-sm font-medium text-gray-500">Mon</span>
+              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r">
+                <span className="text-sm font-medium">Mon</span>
               </div>
-              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r border-gray-200">
-                <span className="text-sm font-medium text-gray-500">Tue</span>
+              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r">
+                <span className="text-sm font-medium">Tue</span>
               </div>
-              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r border-gray-200">
-                <span className="text-sm font-medium text-gray-500">Wed</span>
+              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r">
+                <span className="text-sm font-medium">Wed</span>
               </div>
-              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r border-gray-200">
-                <span className="text-sm font-medium text-gray-500">Thu</span>
+              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r">
+                <span className="text-sm font-medium">Thu</span>
               </div>
-              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r border-gray-200">
-                <span className="text-sm font-medium text-gray-500">Fri</span>
+              <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between border-r">
+                <span className="text-sm font-medium">Fri</span>
               </div>
               <div className="p-3.5 flex flex-col sm:flex-row items-center justify-between">
-                <span className="text-sm font-medium text-gray-500">Sat</span>
+                <span className="text-sm font-medium">Sat</span>
               </div>
             </div>
             {/* END: HEADER */}
 
-            <div className="grid grid-cols-7 divide-gray-200">
+            <div className="grid grid-cols-7">
               {generatedDates.map((date, index) => {
                 return (
                   <Tile

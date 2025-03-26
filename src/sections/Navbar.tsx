@@ -1,11 +1,12 @@
 import Dialog, { DialogControl } from "../components/Dialog";
 import { MainHeading } from "../components/Text";
+import ThemeChanger from "../components/ThemeChanger";
 
 const Navbar = () => {
   return (
     <>
       <div className="navbar bg-neutral text-neutral-content">
-        <MainHeading>Scheduling Tool</MainHeading>
+        <MainHeading>Schedule Generator</MainHeading>
 
         <div className="ml-auto">
           <DialogControl target="info" className="btn btn-circle">
@@ -24,8 +25,10 @@ const Navbar = () => {
               />
             </svg>
           </DialogControl>
+          <ThemeChanger />
         </div>
       </div>
+
       <Dialog id={`info`}>
         <p>Made for Jeanne</p>
       </Dialog>

@@ -28,7 +28,7 @@ const ListItem = (props: {
         <div className="flex">
           <input
             type="text"
-            className="border border-blue-300 p-1 rounded"
+            className="border p-1 rounded"
             value={props.item.name}
             onChange={changeItemName}
           />
@@ -105,7 +105,7 @@ const ListItem = (props: {
             const classes = `badge badge-sm text-xs ${
               props.item.days.includes(day)
                 ? "badge-success"
-                : "badge-dash badge-neutral"
+                : "badge-dash badge-error"
             }`;
 
             return (

@@ -1,5 +1,3 @@
-import React from "react";
-
 type AppShellComponents = {
   top: React.ReactNode;
   left: React.ReactNode;

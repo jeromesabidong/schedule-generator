@@ -5,7 +5,7 @@ const CalendarNav = () => {
   return (
     show && (
       <div className="flex items-center gap-2">
-        <button className="hidden md:flex py-2 pl-1.5 pr-3 rounded-md bg-gray-50 border border-gray-300 items-center gap-1.5 text-xs font-medium text-gray-900 transition-all duration-500 hover:bg-gray-100">
+        <button className="hidden md:flex py-2 pl-1.5 pr-3 rounded-md  border items-center gap-1.5 text-xs font-medium transition-all duration-500 ">
           <svg
             className="pointer-events-none"
             xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ const CalendarNav = () => {
           </svg>
           Today
         </button>
-        <button className="text-gray-500 rounded transition-all duration-300 hover:bg-gray-100 hover:text-gray-900">
+        <button className="rounded transition-all duration-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -38,7 +38,7 @@ const CalendarNav = () => {
             ></path>
           </svg>
         </button>
-        <button className="text-gray-500 rounded transition-all duration-300 hover:bg-gray-100 hover:text-gray-900">
+        <button className="rounded transition-all duration-300 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

@@ -42,7 +42,7 @@ const Items = () => {
         </div>
 
         <Collapsible title={`Listed items: ${items.length}`}>
-          <ul className="list bg-base-100 border border-gray-100 rounded-box">
+          <ul className="list bg-base-100 border rounded-box">
             {items &&
               items.map((item, key) => {
                 return <ListItem key={key} item={item} setItems={setItems} />;

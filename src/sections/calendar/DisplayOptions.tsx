@@ -5,7 +5,7 @@ const DisplayOptions = () => {
     show && (
       <div className="hidden md:flex items-center gap-3 ">
         <div className="flex items-center gap-2">
-          <button className="p-3 text-gray-500 flex items-center justify-center transition-all duration-300 hover:text-gray-900">
+          <button className="p-3 flex items-center justify-center transition-all duration-300 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -21,8 +21,8 @@ const DisplayOptions = () => {
               ></path>
             </svg>
           </button>
-          <span className="w-px h-7 bg-gray-200"></span>
-          <button className="p-3 text-gray-500 flex items-center justify-center transition-all duration-300 hover:text-gray-900">
+          <span className="w-px h-7 "></span>
+          <button className="p-3 flex items-center justify-center transition-all duration-300 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -43,14 +43,14 @@ const DisplayOptions = () => {
             </svg>
           </button>
         </div>
-        <div className="flex items-center gap-px p-1 rounded-md bg-gray-100">
-          <button className="py-2.5 px-5 rounded-lg bg-gray-100 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-white">
+        <div className="flex items-center gap-px p-1 rounded-md ">
+          <button className="py-2.5 px-5 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white">
             Day
           </button>
-          <button className="py-2.5 px-5 rounded-lg bg-white text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-white">
+          <button className="py-2.5 px-5 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white">
             Week
           </button>
-          <button className="py-2.5 px-5 rounded-lg bg-gray-100 text-sm font-medium text-gray-900 transition-all duration-300 hover:bg-white">
+          <button className="py-2.5 px-5 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white">
             Month
           </button>
         </div>
