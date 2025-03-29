@@ -34,7 +34,11 @@ const ThemeChanger = () => {
         {themes.map((theme, key) => {
           return (
             <li key={key}>
-              <a data-set-theme={theme.theme} data-act-class="active">
+              <a
+                data-set-theme={theme.theme}
+                data-act-class="active"
+                className="text-base-content"
+              >
                 {theme.name}
               </a>
             </li>

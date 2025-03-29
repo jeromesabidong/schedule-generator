@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CalendarNav from "./calendar/CalendarNav";
 import DisplayOptions from "./calendar/DisplayOptions";
 import Tile from "./calendar/Tile";
 import moment, { Moment } from "moment";
 import Monthpicker from "./calendar/Monthpicker";
+import { ScheduleContext } from "../providers/ScheduleProvider";
 
 const Calendar = () => {
   const [month, setMonth] = useState(moment());
   const [generatedDates, setGeneratedDates] = useState<Moment[]>([]);
+
+  const { schedules } = useContext(ScheduleContext);
 
   const generateDatesForMonth = (month: Moment) => {
     const startOfMonth = month.clone().startOf("month");
@@ -77,6 +80,10 @@ const Calendar = () => {
                     key={index}
                     inactive={date.month() != month.month()}
                     date={date}
+                    schedules={schedules.filter((sched) => {
+                      // pass only the schedules for the date
+                      return moment(sched.date).isSame(date);
+                    })}
                   />
                 );
               })}

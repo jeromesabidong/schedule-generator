@@ -3,6 +3,7 @@ import { HelpText, MainHeading } from "../components/Text";
 import ListItem from "../components/ListItem";
 import Collapsible from "../components/Collapsible";
 import { Item } from "../types";
+import randomColor from "../hooks/useRandomColor";
 
 const Items = () => {
   const [items, setItems] = useState<Item[]>([]);
@@ -13,6 +14,7 @@ const Items = () => {
       id: `${items.length + 1}`,
       time: { start: "10:00 AM", end: "7:00 PM" },
       days: ["M", "T", "W", "Th", "F"],
+      color: randomColor(),
     };
     setItems([...items, newItem]);
   };
@@ -21,6 +23,10 @@ const Items = () => {
     if (confirm("Do you want to clear all items? ")) {
       setItems([]);
     }
+  };
+
+  const performScheduling = () => {
+    // @to-do
   };
 
   return (
@@ -39,6 +45,12 @@ const Items = () => {
           <button className="btn btn-error" onClick={handleClear}>
             Clear
           </button>
+          <button
+            className={`btn btn-success ${!items.length && "btn-disabled"}`}
+            onClick={performScheduling}
+          >
+            Generate
+          </button>
         </div>
 
         <Collapsible title={`Listed items: ${items.length}`}>
@@ -47,7 +59,9 @@ const Items = () => {
               items.map((item, key) => {
                 return <ListItem key={key} item={item} setItems={setItems} />;
               })}
-            {items.length === 0 && <li>No items listed.</li>}
+            {items.length === 0 && (
+              <li className="list-row">No items listed.</li>
+            )}
           </ul>
         </Collapsible>
       </HelpText>
